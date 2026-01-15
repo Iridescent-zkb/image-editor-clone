@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Upload, Sparkles } from "lucide-react"
+import { LogIn, Upload, Sparkles } from "lucide-react"
 import { ImageUpload } from "@/components/image-upload"
 
 export function Hero() {
@@ -10,6 +10,15 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-secondary/30 to-background pt-20 pb-32">
+      <div className="absolute top-6 right-6 z-20">
+        <Button size="sm" variant="secondary" className="font-semibold" asChild>
+          <a href="/auth/login">
+            <LogIn className="mr-2 h-4 w-4" />
+            Sign in with Google
+          </a>
+        </Button>
+      </div>
+
       {/* Decorative banana elements */}
       <div className="absolute top-10 right-10 text-8xl opacity-10 rotate-12 pointer-events-none select-none">🍌</div>
       <div className="absolute bottom-20 left-10 text-6xl opacity-10 -rotate-45 pointer-events-none select-none">
